@@ -1,0 +1,61 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-box {
+  height: 350px;
+  width: 250px;
+  background-color: #fff;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.progress-box svg {
+  height: 120px;
+  width: 120px;
+  left: 50%;
+  top: 50%;
+  position: relative;
+  transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.counter {
+  position: absolute;
+  top: 47%;
+  left: 46%;
+  color: blue;
+  font-size: larger;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.stop {
+  height: 89px;
+  width: 89px;
+  background: transparent;
+  border-radius: 50%;
+  border: 12px solid blue;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+#circle {
+  fill: transparent;
+  stroke: blue;
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: animate 8s linear infinite;
+}
+
+@keyframes animate {
+  to {
+    stroke-dashoffset: 10%;
+  }
+}
